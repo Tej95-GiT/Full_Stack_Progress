@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- HTML Level One -->
+        <!-- This is Head -->
+        <meta charset="utf-8">
+        <title>
+            Basics
+        </title>
+    </head>
+    <body>
+        <!-- This is a comment -->
+        <!-- This is body -->
+        <!-- Headings: Headings are defined with <h> and they can be sizeable with numbers -->
+        <h1>This is Heading 1</h1>
+        <h2>This is Heading 2</h2>
+        <h4>This is a Heading 4</h4>
+        <h6>This is a Heading 6</h6>
+        <hr>
+        
+        <!-- Paragraphs: given below are paragraphs which are denoted/declared with <p> command the sequence doesn't really matter. -->
+        <h1><p>This is a Paragraph.</p></h1>
+        <p>This is a line 1.</p>
+        <p>Paragraph with breaks because of large data or content,<br> which is cut to the new line with the help of < br> command.</p>
+        
+        <!-- Basic textstayles -->
+        <p><b>This is a Bold text.</b></p>
+        <p><strong>Bold text but using 'strong' command.</strong></p>
+        <p><i>This is a italic text</i></p>
+        <hr>
+        
+        <!-- List: List basics. -->
+        <h1>Lists</h1>
+        <!-- Ordered list -->
+        <ol>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+        </ol><br>
+
+        <!-- Unordered list -->
+        <ul>
+            <li>Bullet one</li>
+            <li>Bullet list</li>
+            <li> <progress>Test</progress>  </li>
+        </ul><br>
+
+        <!-- Nested list -->
+        <ol>
+            <li>Empty item one</li>
+            <li>Nested list</li>
+            <ul>
+                <li>1st Item</li>
+                <li>2nd Item</li>
+                <ol>
+                    <li>Really nested oredered list.</li>
+                    <li>AAAAAAAAA</li>
+                </ol>
+                <ul>
+                    <li>Whooh! Nested deeply as unordered list.</li>
+                    <li>BBBBBBBBB</li>
+                </ul>
+                <li>3rd Item</li>
+            </ul>
+            <li>Last item</li>
+        </ol>
+        <hr>
+
+        <!-- Tags -->
+        <h1>Tags</h1>
+        <h2>Divs</h2>
+        <!-- Divs: stands for Division. It allows you to tag together groups of elements into basically generic containers. -->
+        <div class="groupone">
+            <h2>Group One</h2>
+            <p>I want to be together in Group One</p>
+            <p>Both are grouped.</p>
+        </div>
+        <hr>
+        
+        <!-- Attributes: HTML Attributes allows us to add more information to HTML tags. such as adding a link or referencing an image -->
+        <h1>Attributes</h1>
+        <img src="word-image-115.png" alt="Image Attribute">
+        <br>
+        <img src="missing.png" alt="Ohh..Uh.! Image not found.">
+        <br>
+        <ul>
+            <li>
+                <a href="newpage.html"><b><i>Click Here!</i></b></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com"><b>YouTube</b></a>
+            </li>
+        </ul>
+        <p><h3><i>Image with Link!</i></h3></p>
+        <a href="https://linkedin.com">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAaVBMVEUAd7X///8AcLEEebb7/f4Debb9/v79/v8DeLY8l8Y7lsYAbbCcyuKlz+WQxN+Lwd0KfbiDvdvl8fcAc7O+3OwgiL6x1ehFnMlytNZqsNQZhLzF4O7w9/tSo81gqtGp0ebc7PUsjsJ8udngaOvIAAADg0lEQVRoge2abZeqIBCAGV7EjXItKjc1y/7/j7xD7m5AWHdD+uScs3s8kDzOIMwMDoGrSJ4lEC6H0ckVkUEiyeQPBC+ar+pjcqm+GsQMEAntUSuaQJQ+toZC8F+7U4KJBMKE6ltUwkAqJUgiEapCAJGwpSwVgxBGtyAJh4NKCVEH4AStRZNZC+1F0V5orgXN00FyukBzZekh2XsgbzFXCMIGSQlhTCsjegrMCEQQVXfF8rOrFYm3YxjCdFnw6zbdFkJHr6AgROjdGYAbATjXOlaXEISRcgN88GEZh3NJIuclBBF0BfzXr3EoYve1ACTXPViuOAO+izRYAMLUxVLEqBK7RQcggp48yHJ6SG5cjAWRsI/0A0FN9g6Ew2p6TZhae+a6pDDXwn67UKt++rcL3+Gts072sW4gDOn5L4VjRBa7rwT3LkarDMNvmeEf8EV0tDSyC9O++dZku4uPyEb8CdO6KrbNtvjQOt5rjXnGnGGkrKmibALfP+7jBQ6fs0lCvnHIn4Tlj2KBsTkJX4cGYgLH1yiD8n+A/LcgACevrHe7ujRXQYXCEFHaIsLNZjgMnMrjstm0nLebZnXodSi6Cbvfz3Zzk3Y97I/ozOxmE2Dkql5vnCS0OQbe+WAgoZbOjcUPpLBbeU0I7dprZi4xlZYyM8ENNP3d6h2DcPkj/Ab5vDVjkllrgg/DpfNA+HN59D3DKMTahW3ILbxoa3Ru/D75x59Uni6vQ3hZOL7N8j9+ePMqRMLmACNnGHce6FUItrcgA4ThCdwU9HUIjDLuVImAjB/4+EFnjCZXba6xv/SU8oLOOEhmvQgu5GRPShQER25Pl667nFrXeBmc7ZUSA8FxLyU1mSWtTw7Fm5S4ia/Ud5KsnVtM34dlrwiIxNkV31ZhhG1sXTh01sy/DkG7W55SqC9npcLXJBBvHEzPLFU4rCeBgBeHs7MDKaaA4A5ZWggvdXKzs5chGTSOn2XKTZlX02jiJnnGOU8O8ZO8u146CWTpQdYzZIbMkBkyQ2bIDJkhA+QmDsRqDkCs3tXTqH4FtiyDxx6BkMiW/ZO4K6eH/eom+27oy2nnNB+8DPfo9j5JgswBk/PVnj1sfnzTKMScPVpf7fMnzU97JzqDfCxvhMxfsf8Ake8pX3hLIUbqkhJtSkpSF8ccTXGMKSXqk5f5vKVg6Xpkkbz06j1FZJC6HO4fbRVnSvd35FUAAAAASUVORK5CYII=" alt="Image not found">
+        </a>
+        <br>
+        <br>
+        <hr>
+
+        
+        <h1>Assessment</h1>
+        <hr>
+
+
+
+
+    </body>
+</html>
