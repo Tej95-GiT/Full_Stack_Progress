@@ -202,9 +202,42 @@
             <input type="text" name="" id="" placeholder="Required" required>
             <input type="button" name="" id="" value="Submit">
         </form>
-        
+        <br><hr>
+
         <!-- Form selections -->
+        <h1>Form Selections</h1>
+        <h2>Hotel Feedback Form</h2>
+
+        <!-- First radio: Form selection can be done with radio and to use type radio in input type. -->
+
+        <form method="get">
+            <h4>What is your Gender?</h4>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male">
+            <br>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female">
+            <!-- Not using same name can create/occur the issue of selecting both/radios so exceptionally if we want to only one radio to be selected then using same name resolves the issue. -->
+
+            <!-- Select tag -->
+            <h4>How was your servies?</h4>
+            <select name="rating">
+                <option value="5">Great</option>
+                <option value="4">Good</option>
+                <option value="3">Average</option>
+                <option value="2">Bad</option>
+                <option value="1">Worst</option>
+            </select>
+            <input type="submit" name="" id="" value="SUBMIT"><br><br>
+
+            <!-- Feedback textarea -->
+            <label for="feedback"><b>Please give feedback here.</b></label><br>
+            <textarea name="feedback" id="feedback" cols="30" rows="5" placeholder="type here..."></textarea><br>
+            <input type="submit" name="" id="feedback" value="SUBMIT"><br>
+        </form>
+        <br><br><hr>
         
+
 
 
 
