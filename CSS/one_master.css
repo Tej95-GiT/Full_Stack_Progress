@@ -19,6 +19,27 @@ h1{
     color: honeydew;
 }
 
+span{
+    background-color: firebrick;
+    color: antiquewhite;
+}
+
+/* Specificity: Specificity defines hierarchy of CSS stayling and what type of tags overrule others. */
+
+p{
+    background-color: beige;
+}
+
+#p1{
+    background-color: lightcoral;
+}
+
+.ol{
+    border-style: groove;
+    border-radius: 45px;
+    border-width: 25px;
+    border-color: yellowgreen;
+}
 
 div{
     background-color: aliceblue;
@@ -26,9 +47,45 @@ div{
     border-radius: 0.41cm;
     border-width: thick;
     border-style: double;
+    border-inline-style: dashed;
+    border-radius: 15px;
+    border-right-color: orangered;
+    border-left-color: limegreen;
+    border-block-color: teal;
+    border-bottom-style: dotted;
 }
 
-span{
-    background-color: firebrick;
-    color: antiquewhite;
+#h1{
+    border-inline-style: dashed;
+    border-radius: 15px;
+    border-right-color: orangered;
+    border-left-color: red;
+    border-block-color: teal;
+    border-bottom-style: dotted;
+    border-bottom-color:azure;
+    border-bottom-width: 5px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-style: dashed;
+    border-top-width: 10px;
+    border-top-color:mediumvioletred;
+}
+
+li{
+    background-color: brown;
+    border-style:double;
+    border-color: black;
+    color: aliceblue;
+}
+
+.uptop{
+    color:yellow;
+    block-size: 25px;
+}
+
+#two{
+    color: lime;
+    border-style: dashed;
+    border-width: 5px;
+    block-size: 25px;
 }
