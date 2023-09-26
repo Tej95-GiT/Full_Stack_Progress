@@ -1,0 +1,45 @@
+body{
+    background-color: lightblue;
+}
+
+h1{
+    border-width: 1px;
+    border-style: solid;
+}
+
+h2{
+    color:darkmagenta;
+}
+
+div p{
+    border-bottom-style: ridge;
+    border-width: 0.1px;
+    background-color: #fff596;
+}
+
+input{
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}
+
+#itemone{
+    color: darkmagenta;
+    text-decoration: overline;
+}
+
+#textblock{
+    height: 400px;
+    width: 800px;
+    border-color: grey;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.exit{
+    background-color: blue;
+    border-style: dashed;
+    border-width: 4px;
+    border-color: #fff596;
+    
+}
