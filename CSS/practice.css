@@ -1,0 +1,242 @@
+/* 
+# - for id mention
+
+
+
+*/
+
+
+/* #form{
+    /align: center 
+    padding: 50px / 
+    background-color: rgb(252, 194, 120) 
+    font 1em sans-serif 
+    font-size large
+}
+
+align="center" 
+style=" padding: 50px; background-color: rgb(252, 194, 120); 
+font: 1em sans-serif; font-size: large;"
+
+*/
+
+body{
+    margin: 50px;
+    display: flow-root;
+}
+
+#form{
+    padding: 50px;
+    background-color: rgb(252, 194, 120);
+    font: 1em sans-serif;
+    font-size: large;
+}
+
+#p1{
+    color: blue;
+}
+
+#p2{
+    color: brown;
+    font-size: 1.5em;
+}
+
+#p3{
+    color: rebeccapurple;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#p4{
+    color: green;
+    font-size: larger;
+}
+
+.even{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.odd{
+    font: 1em sans-serif;
+}
+
+#hf1{
+    font-family: "Anta", sans-serif;
+    font-size: 1.5em;
+}
+#hf2{
+    font-family: "Joro", sans-serif;
+    font-size: 1em;
+}
+#hf3{
+    font-family: "poetsen one", sans-serif;
+    font-size: 2em;
+}
+#hf4{
+    font-family: "Jacquard 12", system-ui;
+    font-size: 4.5em;
+}
+
+#hf3b{
+    font-family: "poetsen one", sans-serif;
+    font-size: 2em;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 30px;
+    border-width: 10px;
+    border-top-style: dotted;
+    border-block-end-style: dashed;
+    border-bottom-color: darkred;
+}
+
+#hf4b{
+    font-family: "jacquard 12", system-ui;
+    font-size: large;
+    border: 7px solid rgb(7, 0, 73) ;
+    border-radius: 25px;
+    border-left-style: dotted;
+    border-right-style: groove;
+    border-bottom-style: outset;
+}
+
+#p3b{
+    font-family: "Joro", sans-serif;
+    font-size: 4em;
+    border: 7px solid rgb(7, 0, 73) ;
+    border-radius: 25px;
+    border-left-style: initial;
+    border-right-style: inherit;
+    border-bottom-style: outset;
+}
+
+#p4b{
+    font-family: "jacquard 12", system-ui;
+    font-size: 4em;
+    border: 7px solid rgb(7, 0, 73) ;
+    border-radius: 25px;
+    border-left-style: dotted;
+    border-right-style: groove;
+    border-bottom-style: double;
+}
+
+/* Shadows */
+
+#h1sh{
+    font-family: "jacquard 12", system-ui;
+    font-size: 10pc;
+    text-shadow: 3px 3px 10px rgb(11, 235, 243), -3px -3px 10px red;
+}
+
+#box1{
+    width: 150px;
+    height: 150px;
+    background-color: springgreen;
+    box-shadow: 5px 5px 15px;
+}
+
+/* Margin */
+
+.boxm{
+    font-size: 10em;
+    border: 5px solid;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+#boxm1{
+    background-color: red;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#boxm2{
+    background-color:turquoise;
+    margin-left: 950px;
+    margin-top: auto;
+    margin-bottom: 200px;
+}
+
+#boxm3{
+    background-color: yellowgreen;
+    margin-left: 500px;
+    margin-bottom: auto;
+}
+
+/* Float */
+
+#lg{
+    height: 500px;
+    float: left;
+    margin-right: 10px;
+}
+
+#gate{
+    height: 500px;
+    float: right;
+}
+
+#divf1{
+    background-color: gray;
+    height: 300px;
+    width: 300px;
+    margin: auto;    
+}
+
+/* Overflow = property that sets the desired behavior
+                    when content does not fit in the parent
+                    element box.(Overflow)
+
+                    overflow: visible
+                    overflow: hidden
+                    overflow: clip
+                    overflow: scroll
+                    overflow: auto  
+*/
+
+.divof{
+    border: 3px solid;
+    height: 75px;
+    margin: 50px;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#divof1{
+    border: 3px solid;
+    overflow: auto;
+}
+#divof2{
+    overflow: hidden;
+}
+#divof3{
+    overflow: clip;
+    overflow-clip-margin: 13px;
+}
+#divof4{
+    overflow: scroll;
+}
+#divof5{
+    overflow: visible;
+}
+
+/* Display = block-level and inline
+*/
+
+#divd{
+    background-color: crimson;
+    height: 250px;
+    width: 250px;
+    display: block;
+}
+
+#spand{
+    background-color: teal;
+    height: 250px;
+    width: 250px;
+    display: inline;
+    visibility: ;
+
+}
+
+/*  
+*/

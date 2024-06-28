@@ -1,0 +1,23 @@
+/*
+
+Here are the primary CSS selectors:
+
+1. **Universal Selector**: `*`
+2. **Type Selector**: `element`
+3. **Class Selector**: `.class`
+4. **ID Selector**: `#id`
+5. **Attribute Selector**: `[attribute]`
+6. **Pseudo-class Selector**: `:pseudo-class`
+7. **Pseudo-element Selector**: `::pseudo-element`
+8. **Descendant Selector**: `ancestor descendant`
+9. **Child Selector**: `parent > child`
+10. **Adjacent Sibling Selector**: `preceding + sibling`
+11. **General Sibling Selector**: `preceding ~ sibling`
+12. **Group Selector**: `selector1, selector2`
+13. **Attribute Substring Selectors**: `[attribute^="value"]`, `[attribute$="value"]`, `[attribute*="value"]`
+14. **Negation Selector**: `:not(selector)`
+
+These are the most commonly used CSS selectors.
+
+*/
+
