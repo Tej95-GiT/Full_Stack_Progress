@@ -231,6 +231,7 @@ body{
 
 #spand{
     background-color: teal;
+    font-size: 3.5em;
     height: 250px;
     width: 250px;
     display: inline;
@@ -238,5 +239,204 @@ body{
 
 }
 
-/*  
+/*  Position:
+                relative = positioned relative to where it normally
+                fixed = positioned relative to the viewport
+                absolute = positioned relative to nearrest ancestor
+                sticky = positioned based on scroll position
+                static = default position for an element
 */
+
+.divp{
+    height: 500px;
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#divp1{
+    background-color: aqua;
+    position: relative;
+    left: 200px;
+    top: 100px;
+    height: 250px;
+    width: 250px;
+}
+#divp2{
+    background-color: rgb(30, 238, 58);
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    height: 100px;
+    width: 300px;
+}
+
+#divpb{
+    background-color: gray;
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    bottom: 150px;
+    right: 0%;
+
+}
+
+#divp3{
+    background-color: rgb(233, 217, 0);
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    font-size: 1.5em;
+    top: 15%;
+    left: 20%;
+}
+#divp4{
+    background-color: rgb(255, 17, 0);
+    position: sticky;
+    left: 1000px;
+    height: 250px;
+    width: 250px;
+}
+#divp5{
+    background-color: rgb(89, 0, 255);
+    position: static;
+    left: 250px;
+    height: 500px;
+    width: 500px;
+    background-image: url(../Contents/Bmwe36.png); 
+    background-size: 3em;
+    background-position: 10px;
+    background-attachment: fixed;
+    /* Background image tag!! */
+}
+
+/* Combinators = explains the relationshpi
+                        between listed selectors
+                            = descendant
+                        > = child
+                        ~ = general sibiling
+                        + = adjecent sibling
+                        */
+#container{
+    border: 2px solid;
+}
+
+/* Descendant (space in between element) */
+#container p{
+    
+    border-bottom: 2px dotted;
+}
+
+/* > child  */
+#container > p{
+    font-weight: bold;
+}
+
+/* ~ general sibiling */
+#container ~ p{
+    background-color: yellow;
+}
+
+/* + adjecent sibiling */
+#container + p{
+    background-color: blueviolet;
+}
+
+/* Pseudo classes */
+
+#btna:link{
+    color: rgb(87, 0, 128);
+}
+
+#btna:hover{
+    color: rgb(0, 0, 0);
+}
+
+#btna::active{
+    color: burlywood;
+}
+
+#btna:visited{
+    color: rgb(253, 58, 237);
+}
+
+#btn1:hover{
+    height: 100px;
+    width: 100px;
+    border-color: red;
+    background-color: cyan;
+}
+
+#ulpc
+
+.lipc:hover{
+    background-color:greenyellow;
+}
+
+.lipc:not(:hover){
+    background-color: grey;
+}
+
+.lipc:nth-child(even){
+    background-color: rgb(247, 100, 239);
+}
+
+#surprise{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5em;
+    border-style: groove;
+    border: 3px solid red;
+    padding: 10px;
+}
+
+#surprise img{
+    display: none;
+}
+
+#surprise:hover img{
+    display: block;
+}
+
+/* Pseudo element = keyword added after a selector that's
+                            used to style a specific parts of an element
+
+                            selector::pseudo-element */
+
+#hpe::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+
+#ppe::first-line{
+    background-color: rgb(123, 246, 255);
+}
+
+#ppe::selection{
+    color: rgb(214, 104, 241);
+    background-color: black;
+}
+
+#fruit{
+    font-size: 3em;
+}
+
+#fruit li::marker{
+    content: "✔";
+    color: greenyellow;
+}
+
+#apple::after{
+    content: "🍎";
+}
+
+#mango::after{
+    content: "🥭";
+}
+
+#banana::after{
+    content: "🍌";
+}
+
