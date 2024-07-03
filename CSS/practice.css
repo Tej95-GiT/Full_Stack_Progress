@@ -440,3 +440,97 @@ body{
     content: "🍌";
 }
 
+/*  
+Pagination = method by which a document is separated into pages,
+                        and number are given
+*/
+
+.Pagination{
+    text-align: center;
+
+}
+
+.Pagination a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Pagination a.pag1{
+    background-color: rgb(173, 252, 70);
+    font-weight: bold;
+}
+
+.Pagination a.pag1:hover{
+    background-color: aquamarine;
+    border: 3px solid greenyellow;
+    
+}
+
+.Pagination a:hover:not(.pag1){
+    background-color: darkslategrey;
+}
+
+/* Dropdown menu
+*/
+.Dropdown{
+    display: inline-block;
+}
+
+.Dropdown button{
+    background-color: black;
+    color: hsl(80, 86%, 59%);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.Dropdown button:hover{
+    background-color:hsl(80, 86%, 59%);
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: progress;
+}
+
+.Dropdown a{
+    display: block;
+    color: black;
+    background-color: hsl(86, 82%, 62%);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.Dropdown a:hover{
+    background-color: wheat;
+}
+
+.Dropdown .ddcontent{
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: rgb(202, 255, 97);
+    min-width: 100px;
+    box-shadow: 3px 3px 15px lightcyan;
+}
+
+.Dropdown:hover .ddcontent{
+    display: block;
+    position: absolute;
+    background-color: black;
+    color: rgb(202, 255, 97);
+    min-width: 100px;
+    box-shadow: 3px 3px 15px lightcyan;
+}
+
+/* Navigation Bar = 
+*/
+
+.navbar{
+    text-align: center;
+}
+
