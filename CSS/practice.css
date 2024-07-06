@@ -530,7 +530,150 @@ Pagination = method by which a document is separated into pages,
 /* Navigation Bar = 
 */
 
-.navbar{
+#navbarh1{
     text-align: center;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: darkolivegreen;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.navbar a{
+    color: aliceblue;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: darkgreen;
+}
+
+.navbar li{
+
+}
+
+.mainnb{
+    margin: 20px;
+}
+
+
+/* Layout
+            semantic tags = Keep your content organized
+                            better for SEO
+                            assist screen reader and
+                            other tech for accessibility
+
+            <header>    = introductory content
+            <nav>       = navigation bar links
+            <main>      = main content (section, aside, article, div)
+            <section>   = dependent content
+            <aside>     = side content
+            <article>   = independent content
+            <footer>    = closing content 
+*/
+
+#layouta{
+    background-color: tan;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    padding: 5px;
+    margin: 5px;
+}
+
+#layouta:hover{
+    background-color: bisque;
+    border: 2px solid black;
+    border-style: groove;
+    border-radius: 5px;
+}
+
+#layoutbody{
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+#lh1{
+    background-color: gainsboro;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.lnav{
+    background-color: grey;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.laside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lsection{
+    float: left;
+    width: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.larticle{
+    float: left;
+    width: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lfooter{
+    background-color: gainsboro;
+    box-sizing: border-box;
+    display: block;
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width:600px){
+    .laside, .lsection, .larticle{
+        width: 100%;
+    }
+}
+
+/* image gallary
+*/
+
+.gallery{
+    display: inline-block;
+    border: 1px solid rgb(71, 0, 0);
+    margin: 5px;
+}
+
+.gallery .idescription{
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery:hover{
+    background-color: rgb(202, 90, 90);
+    border: 2px solid red;
+    font-weight: bold;
+}
+
+.gallery img{
+    width: 500px;
 }
 
