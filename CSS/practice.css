@@ -677,3 +677,36 @@ Pagination = method by which a document is separated into pages,
     width: 500px;
 }
 
+/* Fonts wit script link from fontawesome.com
+*/
+
+.icons{
+    text-align: center;
+    color: darkblue;
+}
+
+.icons a{
+    text-decoration: none;
+}
+
+.fa-solid.fa-10x.fa-house-chimney-user{
+    color: rgb(69, 255, 184);
+    background-color: darkslategray;
+    box-shadow: 0px 0px 15px turquoise;
+}
+
+.fa-brands.fa-bitcoin.fa-6x{
+    color: darkgoldenrod;
+}
+
+.fa-solid.fa-bullhorn.fa-10x{
+    color: red;
+}
+
+.fa-solid.fa-heart.fa-9x{
+    color: red;
+}
+
+
+
+
