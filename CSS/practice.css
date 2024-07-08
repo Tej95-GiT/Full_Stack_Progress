@@ -707,6 +707,241 @@ Pagination = method by which a document is separated into pages,
     color: red;
 }
 
+/* Flex-box
+*/
 
+.containerfb{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    column-gap: 2em;
+    row-gap: 2em;
+}
 
+.boxfb{
+    width: 200px;
+    height: 200px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+}
 
+#boxfb1{
+    background-color: teal;
+    align-self:center;
+}
+#boxfb2{
+    background-color: sandybrown;
+    order: 1;
+}
+#boxfb3{
+    background-color: crimson;
+    order: -1;
+}
+#boxfb4{
+    background-color: darkolivegreen;
+}
+
+/*  Transform
+    transform: translateX();
+    transform: translateY();
+    transform: translateZ();
+    transform: translate();
+    transform: translate3d();
+    transform: scale();
+    transform: scale3d();
+    transform: scaleX();
+    transform: scaleY();
+    transform: scaleZ();
+    transform: skew();
+    transform: skewX();
+    transform: skewY();
+*/
+
+.boxtp{
+    width: 250px;
+    height: 250px;
+    border: 3px solid;
+    font-size: 13em;
+    text-align: center;
+    background-color: springgreen;
+
+    transform: translate(50%, 50%);
+    transform: rotateZ(330deg);
+    transform: skewY(140deg, 45deg);
+    
+}
+
+#boxtp1{
+    background-color: springgreen;
+}
+
+#boxtp2{
+    background-color: royalblue;
+}
+
+#boxtp3{
+    background-color:rgb(202, 255, 97);
+}
+
+#boxtp4{
+    background-color: magenta;
+}
+
+#vpimg{
+    width: 1000px;
+}
+
+#vpimg{
+    transform: translateX(45deg) rotateZ(180deg) scaleX(200%) skew(30deg, 30deg);
+}
+
+/*  Animation
+*/
+
+.boxani{
+    width: 300px;
+    height: 300px;
+    background-color: mediumspringgreen;
+    font-size: 3.1em;
+    text-align: center;
+    
+}
+
+#boxani1{
+    background-color: mediumspringgreen;
+    animation-name: slideleft;
+    animation-duration: 5s;
+}
+#boxani2{
+    background-color: mediumpurple;
+    animation-name: slideright;
+    animation-duration: 3s;
+}
+#boxani3{
+    background-color: mediumblue;
+    animation-name: slideup;
+    animation-duration: 4s;
+}
+#boxani4{
+    background-color: lightcoral;
+    animation-name: slidedown;
+    animation-duration: 6s;
+}
+#boxani5{
+    background-color: yellow;
+    animation-name: rotate;
+    animation-duration: 4s;
+}
+
+#boxani6{
+    background-color: orangered;
+    animation-name: grow;
+    animation-duration: 3s;
+}
+
+#boxani7{
+    background-color: chartreuse;
+    animation-name: shrink;
+    animation-duration: 4s;
+}
+
+#boxani8{
+    background-color: hsl(0, 100%, 50%);
+    animation-name: fade;
+    animation-duration: 4s;
+}
+
+#boxani9{
+    background-color: chartreuse;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 6s;
+}
+
+#boxani10{
+    background-color: hsl(0, 100%, 50%);
+    animation-name: colorChange;
+    animation-duration: 4s;
+}
+
+#boxani11{
+    background-color: hsl(135, 95%, 58%);
+    animation-name: glow;
+    animation-duration: 4s;
+}
+
+#boxani12:hover{
+    background-color: hsl(310, 100%, 15%);
+    animation-name: glow;
+    animation-duration: 2s;
+}
+
+#boxani13:active{
+
+    animation-name: glow1;
+    animation-duration: 2s;
+}
+
+@keyframes slideleft{
+    from{transform: translateX(700px);}
+}
+
+@keyframes slideup{
+    from{transform: translateY(700px);}
+}
+
+@keyframes slideright{
+    from{transform: translateX(-700px);}
+}
+
+@keyframes slidedown{
+    from{transform: translateY(-700px);}
+}
+
+@keyframes rotate{
+    50%{transform: rotateZ(360deg);}
+}
+
+@keyframes grow{
+    75%{transform: scale(2, 2);}
+}
+
+@keyframes shrink{
+    40%{transform: scale(0.5, 0.5);}
+}
+
+@keyframes fade{
+    50%{opacity: 0;}
+}
+
+@keyframes fadeIn{
+    100%{opacity: 1;}
+}
+
+@keyframes colorChange{
+    0%{background-color: red;}
+    20%{background-color: cyan;}
+    4%{background-color: greenyellow;}
+    60%{background-color: magenta;}
+    80%{background-color: crimson;}
+    100%{background-color:darkblue;}
+}
+
+@keyframes glow{
+    50%{box-shadow: 0px 0px 100px magenta;}
+}
+@keyframes glow1{
+    100%{box-shadow: 0px 0px 100px red;}
+}
+
+#boxani1a{
+    animation-name: slideleft;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    /* animation-timing-function: ease-in-out, ease-in, ease out, normal, steps, etc
+    */
+}
