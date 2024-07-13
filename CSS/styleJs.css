@@ -34,3 +34,31 @@ body{
     background-color:rgb(48, 96, 255);
 }   
 
+#rollBtn{
+    align-self: center;
+    justify-content: center;
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    padding: 5px 25px;
+}
+
+#rollLabel{
+    text-align: center;
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#ifLicense{
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    border: 3px solid blue;
+}
+
+#ckdSubmit{
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+}

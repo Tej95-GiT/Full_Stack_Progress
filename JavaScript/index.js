@@ -195,3 +195,210 @@ resetBtn.onclick = function (){
     count = 0;
     countLabel.textContent = count;
 }
+
+/* 8. Math = built-in object that provides a 
+                collection of properties of methods
+*/
+
+console.log(Math.PI);
+console.log(Math.E);
+
+let q = 3.21;
+let w = 2.99;
+let r;
+
+//r = Math.round(q);    // rounds the number
+//r = Math.floor(w);    // rounds down the number
+//r = Math.ceil(q);     // ceil opposite of floor
+//r = Math.trunc(w);    // truncates elmenates the decimal portion
+//r = Math.pow(q, 2);   // Power of numbers      
+//r = Math.sqrt(w);     // square root 
+//r = Math.log(q);        // Natural logarithm
+//r = Math.sin(q);    // Sin
+//r = Math.cos(q);    // Cos
+//r = Math.tan(q);    // tan
+//r = Math.abs(q);    // Absolute value basically elemenating the negative sign
+//r = Math.sign(w);   // Sign of the number Positive or Negative or Zero
+
+//let max = Math.max(q, w, r);    // Maximum value from the variables
+// console/log(Math);
+
+let min = Math.min(q, w, r); // Minimum value from the variables
+
+
+
+console.log(r);
+//console.log(r);
+
+// 9.Random Number Generator
+const min1 = 50;
+const max1 = 100;
+
+let randomNum = Math.floor(Math.random() * (max1 - min1)) + min1;
+console.log(randomNum);
+
+const rollBtn = document.getElementById("rollBtn");
+const rollLabel = document.getElementById("rollLabel");
+
+const minr = 1;
+const maxr = 6;
+
+rollBtn.onclick = function() {
+    rollLabel.textContent = Math.floor(Math.random() * maxr) + minr;
+}
+
+// 10. If Statements = conditional statements that are used
+//                     to perform different actions based on
+//                     different conditions
+//                      if the condition is true then do this action and else do that action 
+//                     1. if
+//                     2. if-else
+//                     3. if-else-if
+//                     4. ternary operator
+
+let timeif = 9;
+
+if(timeif < 12){
+    console.log("Good Morning!");
+}
+else{
+    console.log("Good Afternoon!");
+}
+
+let isStudent = false;
+if(isStudent){
+    console.log("You are a Student");
+}
+else{
+    console.log("You are not a Student");
+}
+
+const ageIf = document.getElementById("ageIf");
+const ifSubmit = document.getElementById("ifSubmit");
+const ifP = document.getElementById("ifP");
+let ageL = 18;
+let hasLicense = false;
+
+ifSubmit.onclick = function() {
+ageL = ageIf.value;
+ageL = Number(ageL);
+if(ageL >= 18){
+    ifP.textContent = `You are old enough to drive`;
+    if(hasLicense){
+        ifP.textContent = `You have a valid license`;
+    }
+    else{
+        ifP.textContent = `You do not have a valid license`;
+    }
+}
+else{
+    ifP.textContent = `You are not old enough to drive`;
+}
+}
+
+// 11. Checked Property = property that returns true or false
+//                          if the element is checked or not from HTML checkbox or radio button
+
+const checkbox = document.getElementById("checkbox");
+const visaBtn = document.getElementById("visaBtn");
+const masterBtn = document.getElementById("masterBtn");
+const paypalBtn = document.getElementById("paypalBtn");
+const ckdSubmit = document.getElementById("ckdSubmit");
+const ckdP = document.getElementById("ckdP");
+const ckdSub = document.getElementById("ckdSub");
+
+ckdSubmit.onclick = function() {
+    if(checkbox.checked){
+        ckdSub.textContent = `You took the Subscription!`;
+    }
+    else{
+        ckdSub.textContent = "You did not take the Subscription!";
+    }
+
+    if(visaBtn.checked){
+        ckdP.textContent = `You paying with Visa!`;
+    }
+    else if(masterBtn.checked){
+        ckdP.textContent = `You paying with MasterCard!`;
+    }
+    else if(paypalBtn.checked){
+        ckdP.textContent = `You paying with PayPal!`;
+    }
+    else{
+        ckdP.textContent = `Please select your payment method!`;
+    }
+}
+
+// 12. Ternary operator = condition ? true : false
+//                      if the condition is true then do this action
+//                      if the condition is false then do that action
+//                      a shortcut to if{} and else{} statements helps to assign a variable
+//                      based on a condition
+//                      condition ? codeIfTrue : codeIfFalse;
+//                      syntax: variable = (condition) ? true : false;
+
+let age2= 16;
+let message = (age2 >= 18) ? `You are an Adult` : `You are a Minor`;
+console.log(message);
+
+let purchaseAmount = 125;
+let discount = (purchaseAmount >= 100) ? 10 : 0;
+console.log(`Your total is $${purchaseAmount - purchaseAmount * (discount/100)}`);
+
+
+// 13. Switch Statements = used to perform different actions
+//                         based on different conditions
+
+let days = 6;
+
+switch(days){
+    case 1:
+        console.log("It is Monday");
+        break;
+    case 2:
+        console.log("It is Tuesday");
+        break;
+    case 3:
+        console.log("It is Wednesday");
+        break;
+    case 4:
+        console.log("It is Thursday");
+        break;
+    case 5:
+        console.log("It is Friday");
+        break;
+    case 6:
+        console.log("It is Saturday");
+        break;
+    case 7:
+        console.log("It is Sunday");
+        break;
+    default:
+        console.log(`${days} is not a valid day`);
+        break;
+}
+
+//
+
+let testScore = 75;
+let grade;
+
+switch(true){
+    case testScore >= 90:
+    grade = "A";
+    break;
+    case testScore >= 80:
+    grade = "B";
+    break;
+    case testScore >= 70:
+    grade = "C";
+    break;
+    case testScore >= 60:
+    grade = "D";
+    break;
+    default :
+    grade = "F";
+    break;
+}
+
+console.log(`Your grade is ${grade}`);
