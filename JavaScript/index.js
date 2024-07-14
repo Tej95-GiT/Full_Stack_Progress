@@ -402,3 +402,161 @@ switch(true){
 }
 
 console.log(`Your grade is ${grade}`);
+
+
+// 14. String methods = allow you to manipulate and work with text (Strings)
+
+let str = "JavaScript    ";
+
+//str = str.toUpperCase();        // convert the string to uppercase
+//str = str.toLowerCase();       // convert the string to lowercase
+str = str.trim();       // remove white space from the string
+console.log(str);       
+
+console.log(str.charAt(0));             // return the character at the specified index
+console.log(str.indexOf("S"));          // return the index of the specified character
+console.log(str.lastIndexOf("i"));      // return the index of the specified character
+console.log(str.length);                // return the length of the string
+
+str = str.repeat(3);                     // repeat until the end of the string 
+console.log(str);   
+
+let strResult = str.startsWith("J");     // check if the string starts with the specified character
+console.log(strResult);                 // return the boolean value
+
+//strResult = str.endsWith(" ");        // check if the string ends with the specified character
+//console.log(strResult.endsWith(" ")); // return the boolean value
+
+let phoneNumber = "123-456-7890"
+phoneNumber = phoneNumber.replaceAll("-", "");      // replace all "specifiedInput" with given input
+console.log(phoneNumber);
+
+phoneNumber = phoneNumber.padEnd(12, "+9");         // pad the string/number with given input
+console.log(phoneNumber);
+
+phoneNumber = phoneNumber.padStart(15, "+81");      // pad the string/number with given input
+console.log(phoneNumber);
+
+// 15. String Slicing = allow you to select parts of a string
+//                      creating a substring from portion of the another string
+//                      string.slice(start, end); // slice from start to end
+
+const fullName = "Java Script";
+let firstNames = fullName.slice(0, 4);      // strings from 0 to 4 
+console.log(firstNames);
+
+let lastName = fullName.slice(5, 11);       // strings from 5 to 11
+console.log(lastName);
+
+
+
+// 16. Method chaining = chaining multiple methods together
+//                        it allows you to perform multiple actions
+//                        on the same object    
+//                          calling one method after another in one contiguous line of code
+
+// ------------- NO METHOD CHAINING ----------------
+
+let userId = window.prompt("Enter you user id: ");
+
+userId = userId.trim();
+let letter = userId.charAt(0);
+letter = letter.toUpperCase();
+
+let extraChars = userId.slice(1);
+extraChars = extraChars.toLowerCase();
+userId = letter + extraChars;
+
+console.log(userId);
+
+
+// ------------- METHOD CHAINING --------------------
+
+
+let userId2 = window.prompt("Enter you user id2: ");
+userId2 = userId2.trim().charAt(0).toUpperCase() + userId2.trim().slice(1).toLowerCase();
+console.log(userId2);
+
+
+// 17. Logical Operators = used to combine conditional statements
+//                         and return a single boolean value
+//                          used to combine or manipulate boolean values (true and false)
+//                          And = &&
+//                          Or = ||
+//                          Not = !
+
+const temp = 20;
+
+if(temp > 0  && temp <= 30){                        // && And Operator
+    console.log("The Whether is GOOD");
+}
+else if(temp < -999 || temp <= 0){                  // || OR Operator 
+    console.log("The Whether is Cold");
+}
+else{
+    console.log("The Whether is BAD");
+}
+
+const isSunny = true;
+if(!isSunny){                                       // ! Not Operator
+    console.log("It is Cloudy weather");
+}
+else{
+    console.log("It is Sunny");
+}
+
+
+// 18. Strict Equality 
+//      =   assignment operator
+//      ==  comparison operator ( compare if value is equal)
+//      === strict equality operator    ( compare if value & datatype are equal)
+//      !=  inequality operator 
+//      !==  strict inequality operator
+
+const strict = 5.789;
+
+switch(strict){
+//    case strict = 5.789:
+//        console.log("It is Equal No Strict check");
+//        break;
+    case strict == "5.789":
+        console.log("It is Equal without datatype Equality");
+    break;
+    case strict === "5.789":
+        console.log("Data type is not Equal");
+    break;
+    case strict === 5.789:
+        console.log("Data type is Equal");
+    break;
+    case strict != "5.789":
+        console.log("It is Not Equal without strict Equality(!=)");
+    break;
+    case strict !== 5.789:
+        console.log("It is Not Equal with strict Equality(!==)");
+    break;
+    default:
+        console.log("The strict amount is 5.789");
+    break;
+}
+
+
+// 19. While loop = repeat some code WHILE some condition is true
+
+let i = 0;
+while(i <= 10){
+    console.log(i);
+    i++;
+}
+
+// 20. Do-While loop = repeat some code at least once, then check the condition
+
+let j = 20;
+do{
+    console.log(j);
+    j++;
+}while(j <= 30);
+
+
+
+
+
