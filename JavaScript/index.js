@@ -690,5 +690,74 @@ function3();
 
 
 
+// 25. ARRAYS
+//      Arrays are used to store multiple values in a single variable
+//      Arrays are zero-indexed
+//      Arrays can hold different data types
+
+let fruits = ["Apple", "Orange", "Banana"];
+
+console.log(fruits);
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+
+fruits[3] = "Coconuts";                     // Changing the value of an array At a particular index
+console.log(fruits[3]);
+
+fruits.push("Mango");                       // .push function called when the value is changed to the end of the array
+//fruits.pop();                             // .pop function called when the value is removed from the array
+fruits.unshift("Mango");                    // .unshift function called when the value is added to the beginning of the array
+//fruits.shift();                           // .shift function called when the value is removed from the beginning of the array
+
+let numOfFruits = fruits.length;             // .length function called when the length is needed
+console.log(numOfFruits, fruits);
+
+let indexF = fruits.indexOf("Mango");
+console.log(indexF);
+
+for(let i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
+}
 
 
+
+// 26. Spread Operator
+//      It allows an iterable such as an array or string to be expanded
+//      in places where zero or more arguments are expected
+//      It allows an iterable such as an array or string to be expanded
+//      ...  allows an iterable such as an array or string to be expanded into separate elements(Unpack the element)
+
+let numbers = [1, 2, 3, 4, 5];
+let newNumbers = [...numbers, 6, 7, 8, 9, 10];      // ... Unpacks the element like a box 
+console.log(newNumbers);
+
+let maximum = Math.max(...numbers);                  // ... allows an iterable such as an array or string to be expanded
+console.log(maximum);
+
+let array = "Java Script";
+let lettersA = [...array].join("-");                 // .join function called when the array is joined
+
+console.log(lettersA);
+
+let vegies = [...fruits, "Potato", "Tomato", "Cucumber"];
+
+console.log(vegies);
+
+
+// 27. Rest Parameter = (...rest) allows a function work with a variable number of arguments by building them into an array
+//                         spread = Expands an array into seperate elements
+//                          rest = bundles sperate elements into an array
+
+function favFoods(...foods){
+    console.log(foods);
+}
+
+const food1 = "Pizza";
+const food2 = "Pasta";
+const food3 = "Rice";
+const food4 = "Barbeque Misal";
+const food5 = "Samosa";
+const food6 = "Biryani";
+
+favFoods(food1, food2, food3, food4, food5, food6);
