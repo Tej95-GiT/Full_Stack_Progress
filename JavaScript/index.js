@@ -557,6 +557,113 @@ do{
 }while(j <= 30);
 
 
+// 21. For loop = repeat some code a certain number of times
+
+for(let f = 0; f <= 4; f++) {
+    console.log(f);
+    console.log("For loop");
+}
+
+for(let f = 0; f <= 10; f+=2) {
+    console.log(f);
+}
+
+for(let f = 10; f > 0; f-=3) {
+    if(f == 10){
+        continue;
+    }
+    else{
+        console.log(f);
+    }
+}
+
+//              continue    =   Skips to the next iteration of the loop
+//              break       =   breaks out of the loop
 
 
+// 22. NUMBER GUESSING GAME
+/*
+
+const minNum = 50;
+const maxNum = 100;
+const answer = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
+
+let attempt = 0;
+let guess;
+let running = true;
+
+while(running){
+    guess = window.prompt(`Guess a number between ${minNum} and ${maxNum}`);
+    guess = Number(guess);
+
+    if(isNaN(guess)){
+        alert(`Please enter a valid number between ${minNum} and ${maxNum}`);
+    }
+    else if(guess < minNum || guess > maxNum){
+        alert(`Please enter a number between ${minNum} and ${maxNum}`);
+    }
+    else{
+        attempt++;
+        if(guess < answer){
+            alert(`Too low!`);
+        }
+        else if(guess > answer){
+            alert(`Too high!`);
+        }
+        else{
+            window.alert(`CORRECT! The answer was ${answer}, It took you ${attempt} attempts`);
+            running = false;
+        }
+    }
+}
+
+*/
+
+// The code is Executed properly
+
+
+// 23. Functions = A section of the code that can be reused
+//                  multiple times
+//                  A function is a block of code which only runs when it is called
+//                  Declare code once, use it whenever you want.
+//                  Call the function to execute that code.
+
+function greetUser(name){                                       // Order of the parameters does matters
+    console.log(`Gun Shots! Gun Shots!, Mr. ${name}!`);
+}
+
+greetUser("John Doe");
+greetUser("Donald Trump");
+
+function add(x, y){
+    return x + y;
+}
+function subtract(x, y){
+    return x - y;
+}
+function divide(x, y){
+    return x / y;
+}
+function multiplie(x, y){
+    return x * y;
+}
+
+console.log(add(5, 3));
+console.log(subtract(5, 3));
+console.log(divide(5, 3));
+console.log(multiplie(5, 3));
+
+
+function isEven(number){
+    return number % 2 === 0 ? true : false;
+}
+
+console.log(`${isEven(4)}`, isEven(5));
+
+function validEmail(email){
+    return email.includes(`@`) ? true : false;
+}
+
+console.log(`${validEmail("johndoe@example.com")}`, validEmail("invalid_email"));
+console.log(validEmail("BillGates.cum"))
 
