@@ -667,3 +667,28 @@ function validEmail(email){
 console.log(`${validEmail("johndoe@example.com")}`, validEmail("invalid_email"));
 console.log(validEmail("BillGates.cum"))
 
+
+// 24. Variable Scope = where a variable is recognized and accessible (local & global)
+
+let globalVar = 10;                                     // global variable = This is a variable that can be used anywhere in the code
+
+function1();
+
+function function1(){
+    let localVar = 20;                                   // local variable = This is a Local variable that can only be used within the specified block of code
+    console.log(localVar);
+}
+function function2(){
+    let localVar = 30;        
+    console.log(localVar);                                // local variable
+}
+function function3(){
+    console.log(globalVar);                               // global variable = Global variable can be used anywhere in the code
+}
+
+function3();
+
+
+
+
+
