@@ -761,3 +761,38 @@ const food5 = "Samosa";
 const food6 = "Biryani";
 
 favFoods(food1, food2, food3, food4, food5, food6);
+
+
+
+// RANDOM PASSWORD GENERATOR
+
+function generatePasword(){
+
+    let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let passwordLength = 12;
+    let password = "";
+
+    for(let i = 0; i < passwordLength; i++){
+
+        let randomNumber = Math.floor(Math.random() * chars.length);
+
+        password += chars.substring(randomNumber, randomNumber + 1);
+    }
+    return password;
+}
+
+console.log(generatePasword());
+
+// The code is Executed properly
+
+// 28. Call Back Functions  = A function that is passed as an argument to another function
+//                              Used to handle asynchronous events/ operations:
+//                              1. Reading files
+//                              2. Saving files
+//                              3. Running scripts
+//                              4. Validating data
+//                              5. Running animations
+//                              6. Network requests
+//                              7. Interacting with the DOM
+//                              8. Interacting with the Database
+
