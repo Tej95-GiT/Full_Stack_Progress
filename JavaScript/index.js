@@ -796,3 +796,156 @@ console.log(generatePasword());
 //                              7. Interacting with the DOM
 //                              8. Interacting with the Database
 
+//  `Hey When you're done, call this next!`
+
+/*
+hello(javaScript);
+
+function hello(callback){
+    console.log("Hello World!");
+    callback();                         // callback(); is used to call the next function
+}
+
+function javaScript(callback){
+    console.log("I'm learning JavaScript!");
+    callback();
+}   
+
+function goodBye(){
+    console.log("Good Bye World!");
+}
+*/
+
+sum(displayConsole, 5, 6);
+
+function sum(callback, a, b){
+    let result = a + b;
+    callback(result);
+}
+
+function displayConsole(result) {
+    console.log(result);
+}
+
+
+// 29. forEach() =  The forEach() method calls a function (a callback function) once for each element in an array
+//                   The callback function takes three arguments: the current element, the index, and the array itself
+//                  Method used to iterate over the elements of an array and apply a specified function(callback) to each element
+
+//      array.forEach(callback)
+//      element, index, array
+
+fruits.forEach(upperCase);
+fruits.forEach(display1);
+
+function display1(element){
+    console.log(element);
+}
+
+function upperCase(element, index, array){
+    array[index] = element.toUpperCase();
+}
+
+
+
+// 30. map() = The map() method creates a new array with the results of calling a function for every array element
+//              The map() method calls the provided function once for each element in an array
+//              The map() method does not execute the function for empty elements
+//              The map() method does not change the original array
+
+//    .map()  = accept a callback and applies that function to each element of the array, then returns a new array
+
+
+const fruitsLower = fruits.map(fLowCase);           // .map() = accept a callback and applies that function to each element of the array
+
+console.log(fruitsLower);                   // 
+
+function fLowCase(element){      
+    return element.toLowerCase();       // .map() method calls the provided function once for each element in an array
+}
+
+
+
+// 31. filter() = The filter() method creates a new array filled with elements that pass a test provided by a function
+//                 The filter() method does not execute the function for empty elements
+//                 The filter() method does not change the original array
+
+//  .filter()   = Creates a new array by filtering out elements
+
+let numbersFil = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+let evenNumsF = numbersFil.filter(isEvenF);
+let oddNumF = numbersFil.filter(isOddF);
+//console.log(evenNumsF);
+console.log(oddNumF);
+function isEvenF(element){
+    return element % 2 === 0;
+}
+
+function isOddF(element){
+    return element % 2 !== 0;
+}
+
+
+const agesFil = [16, 17, 18, 19, 20, 25, 35, 45, 55, 66, 88];
+const adultsFil = agesFil.filter(isAdultFil);
+const childFil = agesFil.filter(isChildFil);
+
+console.log(adultsFil);
+
+function isAdultFil(element) {
+    return element >= 18;
+}
+
+function isChildFil(element) {
+    return element < 18;
+}
+
+
+
+//  32. reduce() = The reduce() method executes a reducer function (that you provide) on each element of the array`
+//                 The reduce() method returns a single value: the function's accumulated result
+//                 The reduce() method does not execute the function for empty elements
+//                 The reduce() method does not change the original array
+//                  reduce the elements of an array to a single value
+
+const maximumRed = agesFil.reduce(getMaxRed);
+const minimumRed = agesFil.reduce(getMinRed);
+console.log(maximumRed);
+console.log(minimumRed);
+function getMaxRed(accumulator, element) {
+    return Math.max(accumulator, element);
+}
+
+function getMinRed(accumulator, element) {
+    return Math.min(accumulator, element);
+}
+
+
+
+// 33. Function Expression
+
+//                              Function Declaration = Defines a reusable block of code that performs a specific task
+
+function funcDecl(){
+    console.log("Function Declaration");
+}
+
+
+//                              Function Expression = Defines a reusable block of code that performs a specific task and assigns it to a variable 
+//                                                      A way to Define function as a value or variable
+
+const funExpr = function(){
+    console.log("Function Expression");
+}
+
+funExpr();
+
+setTimeout(function(){
+    console.log("Function Expression with setTimeout")
+}, 3000);
+
+
+
+
+
+
