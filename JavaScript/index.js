@@ -945,6 +945,83 @@ setTimeout(function(){
 }, 3000);
 
 
+//      Function Expression = a way to define functions as a value or variables
+//                              1. Callbacks in Asynchronous operations
+//                              2. Higher order functions 
+//                              3. Closures
+//                              4. Event Listeners
+
+
+
+//  34. Arrow Functions = A concise way to write a function expressions good for simple functions that you use only once
+//                          (parameters) => some code
+//                        The arrow function is a concise way to write a function expression
+//                        The arrow function is an anonymous function
+
+
+const arrow = (fruits) => {console.log("Arrow Function")
+                            console.log(`These are fav fruits: ${fruits}`)
+                        };
+
+arrow(fruits);
+
+const cubes = numbers.map((element) => Math.pow(element, 2));
+console.log(cubes);
+
+
+
+// 35. Objects  = An object is a collection of properties and/or methods
+//                  Can represent real world objects (products, people, etc)
+//                  objects are used to store data in key-value pairs
+//                  keys are properties and values are methods 
+//                  keys and values can be any data type
+//                  keys and values can be duplicated
+//                  keys and values can be arrays
+//                  object ={key: value, key: value, key: value, function()}
+
+
+const person = {
+    firstName: 'Java',
+    lastName: 'Script',
+    age: 30,
+    isMarried: true,
+    hobbies: ['coding', 'painting', 'cooking'],
+    greet: function() {
+        console.log(`Hello, my name is ${firstName} ${lastName}`);
+    },
+    friends: () => {
+        console.log("My Friends are HTML and CSS");
+    }
+}
+
+console.log(person);
+console.log(person.isMarried);
+console.log(person.age);
+person.friends();
+
+
+// 36. this     = The this keyword refers to the object it belongs to
+//                 It can be used to access the properties and methods of the object
+//                  reference to the object where THIS is used
+//                  (the object depends on the immediate context)
+//                  person.name = this.name
+
+const person1 = {
+    name: `Jason Stathan`,
+    age: 35,
+    married: true,
+    greet() {
+        console.log(`Hello, my name is ${this.name}`);
+    },
+    status: function () {
+        console.log(`I'm ${this.age} and ${this.married}`);
+    }
+    }
+
+    person1.greet();
+    person1.status();
+
+    
 
 
 
