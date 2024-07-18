@@ -1023,6 +1023,75 @@ const person1 = {
 
     
 
+    // 37. Constructor Functions
+    //                 A constructor function is a special type of function that is used to create and initialize objects
+    //                 Constructor functions are used to create objects
+
+function Car(make, model, year, color) {
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color,
+    this.drive = () => {console.log(`I'm driving ${this.make} ${this.model}`)}
+}
+
+const car1 = new Car(`Ford`, `Mustang`, 1969, `red`);
+const car2 = new Car(`Pagani`, `Huayra`, 2020, `black`);
+const car3 = new Car(`Konigsegg`, `Jesko`, 2021, `carbon`);
+
+console.log(car1);
+console.log(car1.year);
+
+console.log(car2.make);
+console.log(car2.model);
+console.log(car2.year);
+console.log(car2.color);
+
+car3.drive();
+
+
+
+// 38. Classes = A class is a blueprint for creating objects
+//                Classes are used to create objects
+//                Classes are used to define properties and methods
+//              = (ES6 feature) provides a structured and cleaner way to work with the objects compared 
+//                  to traditional constructor functions
+//                  ex. static, keyword, inheritance, encapsulation
+
+class Product{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+    displayProduct(){
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: $${this.price}`);
+    }
+}
+
+const product1 = new Product('Apple', 1.50);
+const product2 = new Product(`iPhone`, 999.99);
+
+product1.displayProduct();
+product2.displayProduct();
+
+
+
+// 39. Static = Keywords that are used to define properties and methods
+//              to a class itself rther than the objects created
+//              from that class (Class owns anything static, not the object)
+//              static properties and methods can be accessed without creating objects
+//              static depend on the class not the object
+
+class MathUtils{
+    static PI = 3.14159;
+}
+
+console.log(MathUtils.PI);
+
+
+
+
 
 
 
