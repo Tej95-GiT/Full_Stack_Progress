@@ -1090,8 +1090,373 @@ class MathUtils{
 console.log(MathUtils.PI);
 
 
+class User{
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username;
+        User.userCount++;
+    }
+    static getUserCount(){
+        console.log(`There are ${this.userCount} users`);
+    }
+    sayHellow(){
+        console.log(`Hello, my name is ${this.username}`);
+    }
+}
+
+const user1 = new User(`Manager`);
+const user2 = new User(`Manager Licker`);
+const user3 = new User(`Managers-Ex`);
+
+console.log(user1.username);
+console.log(user2.username);
+
+user3.sayHellow();
+User.getUserCount();
+console.log(User.userCount);
 
 
 
+// 40. Inheritance = A class can inherit properties and methods from another class
+//                   Inheritance is used to create a new class based on an existing class
+//                   Allows a new class to inherit a class's properties and methods
+//                   from an existing class (Parent -> Child)
+//                   helps with code reusability 
+//                      
+
+
+class Animal{
+    alive = true;
+
+    eat(){
+        console.log(`This ${this.name} is Eating`);
+    }
+    sleep(){
+        console.log(`This ${this.name} is Sleeping`);
+    }
+}
+
+class Dog extends Animal {
+    name = 'Dog';
+    bark(){
+        console.log(`This ${this.name} is Barking`);
+    }
+}
+class Cat extends Animal {
+    name = 'Cat';
+    meow(){
+        console.log(`This ${this.name} is Meowing`);
+    }
+}
+class Rabbit extends Animal {
+    name = 'Rabbit';
+    hop(){
+        console.log(`This ${this.name} is Hopping`);
+    }
+}
+
+const dog = new Dog();
+const cat = new Cat();
+const rabbit = new Rabbit();
+
+console.log(rabbit.alive);
+rabbit.eat();
+rabbit.sleep();
+dog.bark();
+cat.meow();
+rabbit.hop();
+
+
+// 41. SUPER = keyword is used classes to call the constructor or 
+//              access the properties and methods of  a parent (superclass)
+//              this = this object
+//              super = the parent
+
+class Parent{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    age(){
+        console.log(`My age is ${this.age} years old`);
+    }
+};
+
+class Son extends Parent{
+    constructor(name, age, sports){
+            super(name, age);
+            this.sports = sports;
+        }
+        elder(){
+            console.log(`I am the Eldest child: ${this.name}`);
+            super.age();
+        }
+};
+
+class Daughter extends Parent{
+constructor(name, age, hobbies){
+    super(name, age);
+    this.hobbies = hobbies;
+    }
+    younger(){
+        console.log(`I am the Younger child: ${this.name}`);
+        super.age();
+    }
+};
+
+
+
+const son = new Son(`John`, 32, `Swimming`);
+const daughter = new Daughter("Molly", 34, 'Cooking');
+
+
+console.log(son);
+console.log(son.sports);
+console.log(daughter.sports);
+console.log(daughter.name);
+console.log(daughter.age);
+console.log(daughter.hobbies);
+
+son.elder();
+
+
+
+// 42. Getters and Setters = Getters and setters are used to access and modify
+//                            the properties of an object
+//                            allows you to define custom logic for accessing and
+//                            modifying properties of an object     
+//              getters =   special method that makes a property readable
+//              setters =   special method that makes a property writable
+
+//  validate and modify a value when reading/writing a property
+
+class Rectangle {
+    constructor (width, height){
+        this.width = width;
+        this.height = height;
+    }
+
+    set width(newWidth){
+        if(newWidth > 0){
+            this._width = newWidth;
+        }
+        else{
+            console.error("Invalid width property, Please enter positive number");
+        }
+    }
+
+    set height(newheight){
+        if(newheight > 0){
+            this._height = newheight;
+        }
+        else{
+            console.error("Invalid Height property, Please enter positive number");
+        }
+    }
+
+    get width(){
+        return `${this._width.toFixed(1)}cm`;
+    }
+    get height(){
+        return `${this._height.toFixed(1)}cm`;
+    }
+    get area(){
+        return `${(this._width * this._height).toFixed(1)}cm^2`;
+    }
+}
+
+const rectangle = new Rectangle(-5, -10);
+
+rectangle.width = 20;
+rectangle.height = 50;
+
+console.log(rectangle.width);
+console.log(rectangle.height);
+console.log(rectangle.area);
+
+
+
+// 43. Destructuring = Destructuring is a JavaScript expression that allows
+//                      you to unpack values from arrays, or properties
+//                      from objects, into distinct variables.
+//                      Destructuring allows you to extract data from arrays
+
+//                   =  Extract values from arrays and objects, then assign them to variables in convenient ways 
+//                      [] = to perform array destructuring 
+//                      {} = to perform object destructuring
+
+//  --------------// EXAMPLE 1 //--------------
+//  Swap the values of two variables
+
+let da1 = 1;
+let da2 = 2;
+
+[da1, da2] = [da2, da1];
+
+console.log(`da1: ${da1}`);
+console.log(`da2: ${da2}`);
+
+
+//  --------------// EXAMPLE 2 //--------------
+//  Swap 2 Elements in the array
+
+const colors = ["Red", "Green", "Yellow", "Blue", "Black", "White"];
+
+[colors[0], colors[4], colors[1]] = [colors[4], colors[0], colors[5]];
+
+console.log(colors);
+
+
+// -----------------// EXAMPLE 3 //---------------
+//  Assign Array Elements to Variables
+
+const [firstColor, secondColor, thirdColor, fourthColor, fifthColor, sixthColor] = colors;
+
+console.log(`First Color: ${firstColor}`);
+console.log(`Second Color: ${secondColor}`);
+console.log(`Third Color: ${thirdColor}`);
+console.log(`Fourth Color: ${fourthColor}`);
+console.log(`Fifth Color: ${fifthColor}`);
+console.log(`Sixth Color: ${sixthColor}`);
+
+
+// -----------------// EXAMPLE 4 //---------------
+// Extract values from objects
+
+const personD1 = {
+    nameD: "John",
+    ageD: 30,
+    cityD: "New York",
+    jobD: "WWE Wrestler"
+};
+
+const personD2 = {
+    nameD: "Jane",
+    ageD: 25,
+    cityD: "Los Angeles"
+};
+
+const {nameD, ageD, cityD, jobD="unemployed"} = personD1;       // Values extracted can even have default values 
+
+console.log(`Name: ${nameD}`);
+console.log(`Age: ${ageD}`);
+console.log(`City: ${cityD}`);
+console.log(`Job: ${jobD}`);
+
+
+// -----------------// EXAMPLE 5 //---------------
+// DESTRUCTURE IN FUNCTION PARAMETERS
+
+function displayPersonDes({nameD, ageD, cityD, jobD="unemployed"}){
+    console.log(`Name: ${nameD}`);
+    console.log(`Age: ${ageD}`);
+    console.log(`City: ${cityD}`);
+    console.log(`Job: ${jobD}`);
+}
+
+displayPersonDes(personD2);
+
+
+// 44. Nested Objects = Objects can be nested within other objects to create
+//                      hierarchical data structures
+//                      can be nested within other objects, arrays, or even
+
+//                      Objects Inside the Object
+//                      Allows you to represent more complex data structure 
+//                      Child Object is enclosed by Parent Object
+
+//                      Person{Address{}, ContactInfo{}}
+//                      ShoppingCart{Address{}, ContactInfo{}}
+
+const personN1 = {
+    nameN: "Jason",
+    ageN: 30,
+    cityN: "Florida",
+    jobN: "COP",
+    addressN: {
+        streetN: "123 Main St",
+        cityN: "Miami",
+        stateN: "FL",
+        zipN: "10001"
+    },
+    contactInfoN: {
+        phoneN: "123-456-7890",
+        emailN: "jason@example.com"
+    }
+};
+
+
+console.log(personN1.nameN);
+console.log(personN1.cityN);
+console.log(personN1.jobN);
+console.log(personN1.contactInfoN.phoneN);
+console.log(personN1.contactInfoN.emailN);
+
+for (const property in personN1.addressN){
+    console.log(personN1.addressN[property]);
+}
+
+class PersonN2{
+    constructor(nameN2, ageN2, ...addressN2){
+        this.nameN2 = nameN2;
+        this.ageN2 = ageN2;
+        this.addressN2 = new AddressN2(...addressN2);
+    }
+}
+
+class AddressN2{
+    constructor(streetN2, cityN2, stateN2, zipN2){
+        this.streetN2 = streetN2;
+        this.cityN2 = cityN2;
+        this.stateN2 = stateN2;
+        this.zipN2 = zipN2;
+    }
+}
+
+const personN2 = new PersonN2("Lucia", 28, "123 Main St", "Miami", "FL", "10001");
+
+console.log(personN2.nameN2);
+console.log(personN2.addressN2.cityN2);
+
+
+
+// 45. Arrays of Objects
+//                  Arrays can contain objects
+//                  Objects can be nested within other objects
+//                  Arrays can be nested within other arrays
+//                  Arrays can be nested within other objects
+
+const fruitsAO = [  {name: "Apple", color: "Red"}, 
+                    {name: "Banana", color: "Yellow"}, 
+                    {name: "Orange", color: "Orange"}, 
+                    {name: "Pear", color: "Green"}, 
+                    {name: "cherry", color: "Red"} ];
+for (var f = 0; f < fruitsAO.length; f++){
+    console.log(fruitsAO[f].name, fruitsAO[f].color);
+}
+
+fruitsAO.push({name: "fig", color: "Yellow"});
+console.log(fruitsAO[5].name);
+
+
+// 46. sort()   =   method used to sort element of an array in place,
+//                  Sorts elements in strings in lexicographic order, not alphabetical order
+//                  lexicographic = (alphabet + numbers + symbols) as string
+
+//                  Arrays.sort() = sorts elements in place
+//                  sort() = returns a new array with sorted elements
+
+fruits.sort();
+
+console.log(`Sorted fruits array: ${fruits}`);
+
+let ranNum = [43, 23, 654, 56, 1, 9, 0, 87, 124, 76];
+
+ranNum.sort((a, b) => a - b);     // sort the numbers in ascending order
+console.log(ranNum);
+
+fruitsAO.sort((a,b) => a.name.localeCompare(b.name));
+console.log(fruitsAO);
 
 
