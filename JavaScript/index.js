@@ -1460,3 +1460,135 @@ fruitsAO.sort((a,b) => a.name.localeCompare(b.name));
 console.log(fruitsAO);
 
 
+// 47. Shuffle an Array
+//                  Shuffles elements in an array
+
+// Fisher-Yates algorithm
+
+const cards = [`A`, 2, 3, 4, 5, 6, 7, 8, 9, 10, `J`, `Q`, `K`];
+
+function shuffle(array){
+    for(let i = array.length - 1; i > 0; i--){
+        const randomC = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[randomC]] = [array[randomC], array[i]]
+    }
+}
+
+shuffle(cards);
+console.log(cards);
+
+
+
+// 48. Date Objects =   Objects used to represent dates
+//                      Date objects can be created using Date() constructor
+//                      Date objects can be created using new Date() constructor
+//                      Date objects can be created using new Date(year, month, day, hours, minutes, seconds, milliseconds) constructor
+
+//                      Object that contains values that represents date and times
+//                      These date objects can be changed and formatted
+
+const date = new Date();
+console.log(date); 
+
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDay();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
+const milliseconds = date.getMilliseconds();
+const dayOfWeek = date.getDay();
+
+console.log(`Year: ${year}, Month: ${month}, Day: ${day}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}, Milliseconds: ${milliseconds}, Day of Week: ${dayOfWeek}`);
+
+const date1 = new Date();
+
+date1.setDate(date1.getDate() + 1);  // add 1 day to current date
+date1.setFullYear(2022);            // set year to 2022
+date1.setMonth(1); // set month
+date1.setDate(1); // set day
+date1.setHours(0); // set hour
+date1.setMinutes(0); // set minute
+date1.setSeconds(0); // set second
+date1.setMilliseconds(0); // set millisecond
+
+console.log(date1);
+
+
+
+// 49. Closure =   A closure is a function that has access to the parent scope
+//                  when it was created, even after the parent function has
+//                  returned
+
+//                  A function defines inside of another function, the inner function has access to
+//                  variables and scope of outer function.
+//                  Allow for private variables and state maintenance used frequently in js 
+//                  framework: React, Angular, Vue
+
+function outerFunction(){
+    let outerFun = "Outer Function";
+
+    function innerFunction(){
+        let innerFun = "Inner Function";
+        console.log(outerFun);
+        console.log(innerFun);
+    }
+
+    innerFunction();
+}
+
+outerFunction();
+
+function createGame(){
+    let score = 0;
+    function increaseScore(points){
+        score+= points;
+        console.log(`+${score}pts`);
+    }
+    function decreaseScore(points){
+        score-= points;
+        console.log(`-${score}pts`);
+    }
+    function getScore(points){
+        return score;
+    }
+
+    return {increaseScore, decreaseScore, getScore};
+    
+}
+
+const game = createGame();
+game.increaseScore(10);
+game.increaseScore(20);
+game.decreaseScore(5);
+console.log(`Score: ${game.getScore()}`);
+
+
+
+// 50. setTimeout() =   function in javaScript that executes after a specified time
+//                      setTimeout() = executes after a specified time
+//                      setTimeout() = returns a timer ID
+//                      function in javaScript that allows you to schedule
+//                      the execution of a function after a specified time(milliseconds)
+//                      Time are  approximate (Various based on the workload of the javascript runtime env.)
+//                      setTimeout(callback, delay)
+
+setTimeout(() => console.log("Hello from setTimeout"), 2000);
+setTimeout(() => window.alert ("Hello from setTimeout"), 4000);
+
+
+// clearTimeout(timeoutId) =    can cancel a timeout before it triggers
+
+const timeoutId = setTimeout(() => console.log("Hello from clearTimeout"), 3000);
+clearTimeout(timeoutId);
+
+let timeoutId1
+
+function startTimer(){
+    timeoutId1 = setTimeout(() => console.log("Hello from setInterval"), 5000);
+}
+
+function clearTimer(){
+    clearTimeout(timeoutId1);
+}

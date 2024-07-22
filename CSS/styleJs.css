@@ -62,3 +62,15 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 5px;
 }
+
+#sstBtn{
+    text-align: center;
+    font-size: 2em;
+    margin: 20px ;
+}
+
+#cstBtn{
+    text-align: center;
+    font-size: 2em;
+    margin: 20px ;
+}
