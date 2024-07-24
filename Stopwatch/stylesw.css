@@ -1,0 +1,90 @@
+/* Stop Watch  */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(skybackground.jpg);
+    background-repeat: no-repeat;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Changa", sans-serif;
+}
+
+#myH1{
+    font-family: "Changa", sans-serif;
+    font-size: 5em;
+    color:ghostwhite;
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 10px rgba(255, 228, 196, 0.555); 
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    height: 500px;
+    width: 400px;
+    border: 2px solid turquoise;
+    box-shadow: 3px 3px 55px teal;
+    backdrop-filter: sepia(50%);
+    -webkit-backdrop-filter: invert(50%);
+}
+
+#display {
+    font-size: 4em;
+    color:aliceblue;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    text-shadow: 2px 2px 20px black;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+#controls button {
+    font-size: 1.5em;
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    font-family: "Changa", sans-serif;
+    color: white;
+    border-radius: 100%;
+    padding: 15px;
+    text-shadow: 0px 0px 5px black;
+    transition: background-color 0.5s ; 
+    transition: box-shadow 0.5s;
+}
+
+#startBtn {
+    background-color: lime;
+    box-shadow: 0px 0px 45px black;
+}
+
+#startBtn:hover {
+    background-color: lawngreen;
+    box-shadow: 0px 0px 15px lawngreen;
+}
+
+#stopBtn {
+    background-color:rgb(255, 238, 0);
+    box-shadow: 0px 0px 45px black;
+}
+
+#stopBtn:hover {
+    background-color: orange;
+    box-shadow: 0px 0px 15px yellow;
+}
+
+#resetBtn {
+    background-color: red;
+    box-shadow: 0px 0px 45px black;
+}
+
+#resetBtn:hover {
+    background-color: darkred;
+    box-shadow: 0px 0px 15px hsl(0, 100%, 50%);
+}
