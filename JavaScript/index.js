@@ -459,24 +459,38 @@ console.log(lastName);
 
 let userId = window.prompt("Enter you user id: ");
 
+// With error handling
+try{
 userId = userId.trim();
 let letter = userId.charAt(0);
 letter = letter.toUpperCase();
+}
+catch(error){
+    console.error("Error: " + error);
+}
 
+try{
 let extraChars = userId.slice(1);
 extraChars = extraChars.toLowerCase();
 userId = letter + extraChars;
+}
+catch(error){
+    console.log(error);
+}
 
 console.log(userId);
 
 
 // ------------- METHOD CHAINING --------------------
 
-
+try{
 let userId2 = window.prompt("Enter you user id2: ");
 userId2 = userId2.trim().charAt(0).toUpperCase() + userId2.trim().slice(1).toLowerCase();
 console.log(userId2);
-
+}
+catch(error){
+    console.error("Error: " + error);
+}
 
 // 17. Logical Operators = used to combine conditional statements
 //                         and return a single boolean value
@@ -1592,3 +1606,111 @@ function startTimer(){
 function clearTimer(){
     clearTimeout(timeoutId1);
 }
+
+
+
+// 51. ES6 Modules =  A module is a file that contains both code and information about the code itself and its dependencies and exports them to other modules or the global scope of the program in which they are declared in.
+
+//                  =   An external file that contains reusable code that can be imported into another javascript files.
+//                      Write reusable code for many different apps.
+//                      Can contain variables, classes, functions... and more
+//                      Introduced as part of ECMAScript 2015 update.
+
+import { PI1, calculateArea, calculateCircumference, calculateDiameter, calculateVolume } from "./mathUtil.js";
+
+console.log(PI1);
+console.log(calculateArea(8));
+console.log(calculateCircumference(4));
+console.log(calculateDiameter(10));
+console.log(calculateVolume(2));
+
+
+
+// 52. Synchronous & Asynchronous
+//      Synchronous =   The code is executed line by line
+//                      Executes the code line by line consecutively in a sequencial manner 
+//                      code that waits for the previous code to finish before executing or wait for operations to finish
+
+function func1(callback) {
+    setTimeout(() => {
+        console.log("Synchronous Task");
+        console.log("Task 1");
+        callback();
+    }, 2000);
+    
+}
+
+function func2(){
+    console.log("Task 2");
+    console.log("Task 3");
+    console.log("Task 4");
+}
+
+func1(func2);
+
+//      Asynchronous =   The code is executed in parallel
+//                      Allows multiple operations to be performed concurently without waiting for them to finish
+//                      (I/O opertaions, network requests, fetching data)
+//                      Handled with: Callbacks, Promise, Async/Await
+
+async function func3() {
+    console.log("Asynchronous Task");
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log("Task 5");
+    console.log("Task 6");
+}
+
+func3();
+
+
+//      Promise =   A promise is a JavaScript object that represents the eventual completion (or failure) of an asynchronous operation
+//                  Promises are used to handle asynchronous operations in JavaScript.
+//                  Promises provide a way to handle asynchronous code in a more readable and structured way.
+
+function createPromise() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve();
+        }, 4000);
+    });
+}
+
+createPromise().then(() => console.log("Promise resolved"))
+
+
+
+
+// 53. Error Handling
+//                      Errors =   Errors are problems that occur during the execution of a program
+//                      Exceptions =   An exception is an error that occurs during the execution of a program
+//                      An object that is created to represent a problem that occurs
+//                      Occur with user input or with external code or establishing connections
+
+// NETWORK ERROR
+// PROMISE REJECTION
+// SECURITY ERRORS
+
+//  try {}      =   The try block is used to define a block of code to be tested for errors
+//                  Enclose code that might potentially cause an error in the try block
+//  catch {}    =   The catch block is used to define a block of code to be executed, if an error occurs in the try block
+//                  Catch and handle any thrown Errors from try {}
+//  finally {}  =   (Optional) Always executes. Used mostly for cleanup
+//                  ex. close files , close connections, release resources
+
+//  try{} block at line no 463 & 472
+//  catch{} block at line 468 & 477 
+
+try {
+    const response = await fetch("https://api.example.com/data");
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data);
+} catch (error) {
+    console.error("There has been a problem with your fetch operation:", error);
+}
+
+
+
+
