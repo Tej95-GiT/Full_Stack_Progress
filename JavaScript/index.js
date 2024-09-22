@@ -1714,3 +1714,39 @@ try {
 
 
 
+// 54. DOM          =   Document Object Model
+//                    The Document Object Model (DOM) represents an HTML document as an object
+//                    It allows you to manipulate the document using JavaScript objects and methods 
+//                        DOM is a programming interface for HTML and XML (including SVG and MathML) documents and applications on the web.
+//                          Object{} that represents the page you see in the web browser
+//                      and provides you wiht an API to interact with it.
+//                      web browser constructs 
+
+console.log(document);
+console.dir(document);
+
+document.title = "JS Title";
+
+const headNameMsg = " Java Script";
+const headMsg = document.getElementById("Dom-H1-User-msg");
+
+headMsg.textContent += headNameMsg === "" ? `Guest` : headNameMsg;
+
+
+
+
+// 55. Element Selectors        =   Method used to target and manipulate HTML elements
+//                                  They allow  you to select one or multiple HTML elements
+//                                  from the DOM (Document Object Model)
+
+//  1. document.getElementById()            // ELEMENT OR NULL
+//  2. document.getElementByClassName()     // HTML COLLECTION
+//  3. document.getElementByTagName         // HTML COLLECTION
+//  4. document.querySelector()             // ElELEMENT NULL
+//  5. document.querySelector()             // NODELIST 
+ 
+
+
+
+
+
